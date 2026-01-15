@@ -1,0 +1,19 @@
+# --- Scala/sbt ---
+# Target directories (build outputs)
+target/
+project/target/
+project/project/
+
+# sbt cache and plugins
+.sbt/
+.history/
+.bloop/
+.metals/
+.scala-build
+
+# BSP (IDE build server config)
+.bsp/
+
+
+# VS Code
+.vscode/
