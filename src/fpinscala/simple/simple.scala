@@ -1,3 +1,5 @@
+package fpinscala.simple
+
 object MySimpleModule{
     def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean = 
         def loop(i: Int): Boolean = {

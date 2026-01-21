@@ -1,4 +1,5 @@
-import Stream.unfold
+package fpinscala.laziness
+
 sealed trait Stream[+A] {
     def headOption: Option[A] = this match {
         case Empty => None
@@ -108,7 +109,7 @@ sealed trait Stream[+A] {
         zipAll(s).takeWhile_2(xs => !xs._2.isEmpty).forAll((a, b)=> a == b)
     
     def tails: Stream[Stream[A]] =
-        unfold(this)( s => s match {
+        Stream.unfold(this)( s => s match {
                 case Cons(h, t) => Some((Cons(h, t), t()))
                 case _ => None
             }
